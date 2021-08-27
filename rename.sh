@@ -9,8 +9,8 @@ CAMEL=$(echo $PASCAL | sed -r "s/^([A-Z])/\L\1/g")
 
 echo "Renaming all 'base_api' -> '$SNAKE'"
 echo "Renaming all 'base-api' -> '$KEBAB'"
-echo "Renaming all 'BaseApi' -> '$PASCAL'"
-echo "Renaming all 'baseApi' -> '$CAMEL'"
+echo "Renaming all 'DynamodbTraining' -> '$PASCAL'"
+echo "Renaming all 'DynamodbTraining' -> '$CAMEL'"
 
 echo -e "\nRenaming in $PWD.\n"
 read -p "Does this sound OK? " -n 1 -r
@@ -24,15 +24,15 @@ fi
 # folder
 find . -type d -not -path '*/\.git/*' | sed -e "p;s/base_api/$SNAKE/" | xargs -n2 mv
 find . -type d -not -path '*/\.git/*' | sed -e "p;s/base-api/$KEBAB/" | xargs -n2 mv
-find . -type d -not -path '*/\.git/*' | sed -e "p;s/BaseApi/$PASCAL/" | xargs -n2 mv
-find . -type d -not -path '*/\.git/*' | sed -e "p;s/baseApi/$CAMEL/" | xargs -n2 mv
+find . -type d -not -path '*/\.git/*' | sed -e "p;s/DynamodbTraining/$PASCAL/" | xargs -n2 mv
+find . -type d -not -path '*/\.git/*' | sed -e "p;s/DynamodbTraining/$CAMEL/" | xargs -n2 mv
 # file names
 find . -type f -not -path '*/\.git/*' | sed -e "p;s/base_api/$SNAKE/" | xargs -n2 mv
 find . -type f -not -path '*/\.git/*' | sed -e "p;s/base-api/$KEBAB/" | xargs -n2 mv
-find . -type f -not -path '*/\.git/*' | sed -e "p;s/BaseApi/$PASCAL/" | xargs -n2 mv
-find . -type f -not -path '*/\.git/*' | sed -e "p;s/baseApi/$CAMEL/" | xargs -n2 mv
+find . -type f -not -path '*/\.git/*' | sed -e "p;s/DynamodbTraining/$PASCAL/" | xargs -n2 mv
+find . -type f -not -path '*/\.git/*' | sed -e "p;s/DynamodbTraining/$CAMEL/" | xargs -n2 mv
 # strings
 find . -type f -not -path '*/\.git/*' -exec sed -i "s/base_api/$SNAKE/g" {} \;
 find . -type f -not -path '*/\.git/*' -exec sed -i "s/base-api/$KEBAB/g" {} \;
-find . -type f -not -path '*/\.git/*' -exec sed -i "s/BaseApi/$PASCAL/g" {} \;
-find . -type f -not -path '*/\.git/*' -exec sed -i "s/baseApi/$CAMEL/g" {} \;
+find . -type f -not -path '*/\.git/*' -exec sed -i "s/DynamodbTraining/$PASCAL/g" {} \;
+find . -type f -not -path '*/\.git/*' -exec sed -i "s/DynamodbTraining/$CAMEL/g" {} \;
