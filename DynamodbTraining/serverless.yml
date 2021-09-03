@@ -51,8 +51,7 @@ resources:
         ManagedPolicyArns:
           - arn:aws:iam::aws:policy/service-role/AWSLambdaVPCAccessExecutionRole
           - arn:aws:iam::aws:policy/AWSXRayDaemonWriteAccess
-# TODO: Enable this line and set the correct policy name if DynamoDb is in use
-#          - arn:aws:iam::${self:provider.account}:policy/base-api/lambda-dynamodb-base-api
+         - arn:aws:iam::${self:provider.account}:policy/dynamodb-training-api/lambda-dynamodb-dynamodb-training-api
         Policies:
           - PolicyName: manageLogs
             PolicyDocument:
