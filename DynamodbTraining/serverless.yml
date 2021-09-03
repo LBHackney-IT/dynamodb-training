@@ -29,7 +29,6 @@ functions:
             resultTtlInSeconds: 0
             identitySource: method.request.header.Authorization
             managedExternally: true   
-          private: true
       - http:
           path: /swagger/{proxy+}
           method: GET
