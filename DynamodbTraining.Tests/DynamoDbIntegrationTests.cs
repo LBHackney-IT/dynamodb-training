@@ -17,7 +17,7 @@ namespace DynamodbTraining.Tests
 
         private readonly List<TableDef> _tables = new List<TableDef>
         {
-            new TableDef { Name = "Persons", KeyName = "id", KeyType = ScalarAttributeType.S }
+            new TableDef { Name = "dynamodb-training", KeyName = "id", KeyType = ScalarAttributeType.S }
         };
 
         public DynamoDbIntegrationTests()
