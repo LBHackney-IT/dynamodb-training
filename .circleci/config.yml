@@ -184,6 +184,7 @@ workflows:
           filters:
             branches:
               only: master
+              
 #   check-and-deploy-staging-and-production:
 #       jobs:
 #       - build-and-test:
