@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace DynamodbTraining.V1.Infrastructure
 {
 
-    [DynamoDBTable("Persons", LowerCamelCaseProperties = true)]
+    [DynamoDBTable("dynamodb-training", LowerCamelCaseProperties = true)]
     public class DatabaseEntity
     {
         [DynamoDBHashKey]
