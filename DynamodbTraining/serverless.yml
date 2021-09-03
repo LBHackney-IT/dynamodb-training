@@ -51,7 +51,7 @@ resources:
         ManagedPolicyArns:
           - arn:aws:iam::aws:policy/service-role/AWSLambdaVPCAccessExecutionRole
           - arn:aws:iam::aws:policy/AWSXRayDaemonWriteAccess
-         - arn:aws:iam::${self:provider.account}:policy/dynamodb-training-api/lambda-dynamodb-dynamodb-training-api
+          - arn:aws:iam::${self:provider.account}:policy/dynamodb-training-api/lambda-dynamodb-dynamodb-training-api
         Policies:
           - PolicyName: manageLogs
             PolicyDocument:
