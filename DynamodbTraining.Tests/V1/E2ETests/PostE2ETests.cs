@@ -88,7 +88,7 @@ namespace DynamodbTraining.Tests.V1.E2ETests
 
             response.StatusCode.Should().Be(HttpStatusCode.Created);
 
-            
+
 
             var responseContent = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
             var apiPerson = JsonSerializer.Deserialize<PersonResponseObject>(responseContent, CreateJsonOptions());

@@ -7,15 +7,15 @@ using System.Threading.Tasks;
 namespace DynamodbTraining.V1.Domain
 {
 
-   [JsonConverter(typeof(JsonStringEnumConverter))]
-   public enum Title
-   {
-     Dr,
-     Master,
-     Miss,
-     Mr,
-     Mrs,
-     Ms
+    [JsonConverter(typeof(JsonStringEnumConverter))]
+    public enum Title
+    {
+        Dr,
+        Master,
+        Miss,
+        Mr,
+        Mrs,
+        Ms
     }
 
 }

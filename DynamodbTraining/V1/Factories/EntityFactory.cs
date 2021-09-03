@@ -29,7 +29,7 @@ namespace DynamodbTraining.V1.Factories
                 Title = entity.Title,
                 Surname = entity.Surname,
                 PlaceOfBirth = entity.PlaceOfBirth,
-                MiddleName =entity.MiddleName,
+                MiddleName = entity.MiddleName,
                 FirstName = entity.FirstName,
                 DateOfBirth = entity.DateOfBirth
             };

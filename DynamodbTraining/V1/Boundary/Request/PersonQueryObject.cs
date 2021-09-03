@@ -8,7 +8,7 @@ namespace DynamodbTraining.V1.Boundary.Request
 {
     public class PersonQueryObject
     {
-        [FromRoute(Name ="id")]
+        [FromRoute(Name = "id")]
         public Guid Id { get; set; }
     }
 }

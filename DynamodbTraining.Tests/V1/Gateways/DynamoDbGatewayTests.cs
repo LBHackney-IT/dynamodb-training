@@ -91,7 +91,7 @@ namespace DynamodbTraining.Tests.V1.Gateways
         {
             // Arrange
             var entity = ConstructPerson();
-            
+
 
             var dbEntity = entity.ToDatabase();
 

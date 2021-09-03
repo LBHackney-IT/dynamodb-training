@@ -32,7 +32,7 @@ namespace DynamodbTraining.V1.Controllers
         [ProducesResponseType(typeof(PersonResponseObject), StatusCodes.Status200OK)]
         [HttpGet]
         [Route("{Id}")]
-        public async Task<IActionResult> ViewRecord([FromQuery] PersonQueryObject personQueryObject )
+        public async Task<IActionResult> ViewRecord([FromQuery] PersonQueryObject personQueryObject)
         {
             var response = await _getByIdUseCase.Execute(personQueryObject).ConfigureAwait(false);
             if (response == null) return NotFound(personQueryObject.Id);
@@ -58,12 +58,12 @@ namespace DynamodbTraining.V1.Controllers
         [HttpPatch]
         [Route("{id}")]
 
-        public async Task<IActionResult> UpdatePersonByIdAsync([FromBody]PersonRequestObject personRequestObject, [FromRoute] PersonQueryObject query)
+        public async Task<IActionResult> UpdatePersonByIdAsync([FromBody] PersonRequestObject personRequestObject, [FromRoute] PersonQueryObject query)
         {
             if (query.Id == null) return BadRequest(query.Id);
             query.Id = personRequestObject.Id;
 
-            
+
             var person = await _updatePersonUseCase.ExecuteAsync(personRequestObject, query).ConfigureAwait(false);
             if (person == null) return NotFound(query.Id);
 
