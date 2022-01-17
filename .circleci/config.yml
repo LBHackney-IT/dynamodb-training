@@ -164,7 +164,8 @@ workflows:
     jobs:
       - check-code-formatting:
           context: api-nuget-token-context
-      - build-and-test
+      - build-and-test:
+          context: api-nuget-token-context
       - assume-role-development:
           context: api-nuget-token-context
           requires:
