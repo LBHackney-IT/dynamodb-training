@@ -19,6 +19,10 @@ namespace DynamodbTraining.V1.Factories
                 Surname = databaseEntity.Surname,
                 Title = databaseEntity.Title,
                 Tenures = databaseEntity.Tenures
+                PreferredTitle = databaseEntity.PreferredTitle,
+                PreferredFirstName = databaseEntity.PreferredFirstName,
+                PreferredMiddleName = databaseEntity.PreferredMiddleName,
+                PreferredSurname = databaseEntity.PreferredSurname
             };
         }
 
@@ -35,6 +39,10 @@ namespace DynamodbTraining.V1.Factories
                 FirstName = entity.FirstName,
                 DateOfBirth = entity.DateOfBirth,
                 Tenures = entity.Tenures.ToList()
+                PreferredTitle = entity.PreferredTitle,
+                PreferredFirstName = entity.PreferredFirstName,
+                PreferredMiddleName = entity.PreferredMiddleName,
+                PreferredSurname = entity.PreferredSurname
             };
         }
     }

@@ -63,6 +63,10 @@ namespace DynamodbTraining.V1.Factories
                 StartDate = tenure.StartDate,
                 Type = tenure.Type,
                 Uprn = tenure.Uprn
+                PreferredTitle = domain.PreferredTitle,
+                PreferredFirstName = domain.PreferredFirstName,
+                PreferredMiddleName = domain.PreferredMiddleName,
+                PreferredSurname = domain.PreferredSurname
             };
         }
     }

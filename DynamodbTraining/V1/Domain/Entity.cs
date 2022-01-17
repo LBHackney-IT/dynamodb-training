@@ -14,5 +14,9 @@ namespace DynamodbTraining.V1.Domain
         public string DateOfBirth { get; set; }
         public IEnumerable<TenureDetails> Tenures { get; set; }
 
+        public string PreferredTitle { get; set; }
+        public string PreferredFirstName { get; set; }
+        public string PreferredMiddleName { get; set; }
+        public string PreferredSurname { get; set; }
     }
 }

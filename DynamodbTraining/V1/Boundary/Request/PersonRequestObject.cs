@@ -21,5 +21,9 @@ namespace DynamodbTraining.V1.Boundary.Request
         public string PlaceOfBirth { get; set; }
 
         public string DateOfBirth { get; set; }
+        public string PreferredTitle { get; set; }
+        public string PreferredFirstName { get; set; }
+        public string PreferredMiddleName { get; set; }
+        public string PreferredSurname { get; set; }
     }
 }

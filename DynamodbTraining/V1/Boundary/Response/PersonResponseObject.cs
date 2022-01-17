@@ -23,5 +23,13 @@ namespace DynamodbTraining.V1.Boundary.Response
         public string DateOfBirth { get; set; }
         public IEnumerable<TenureResponseObject> Tenures { get; set; }
 
+        /// <example>Mr, Mrs, Miss</example>
+        public string PreferredTitle { get; set; }
+        /// <example>James</example>
+        public string PreferredFirstName { get; set; }
+        /// <example>Harold</example>
+        public string PreferredMiddleName { get; set; }
+        /// <example>White</example>
+        public string PreferredSurname { get; set; }
     }
 }

@@ -19,8 +19,11 @@ namespace DynamodbTraining.V1.Factories
                 MiddleName = createRequestObject.MiddleName,
                 PlaceOfBirth = createRequestObject.PlaceOfBirth,
                 Surname = createRequestObject.Surname,
-                Title = createRequestObject.Title
-
+                Title = createRequestObject.Title,
+                PreferredTitle = createRequestObject.PreferredTitle,
+                PreferredFirstName = createRequestObject.PreferredFirstName,
+                PreferredMiddleName = createRequestObject.PreferredMiddleName,
+                PreferredSurname = createRequestObject.PreferredSurname
             };
 
         }
