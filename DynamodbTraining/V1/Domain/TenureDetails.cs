@@ -24,25 +24,6 @@ namespace DynamodbTraining.V1.Domain
 
         public string PropertyReference { get; set; }
 
-        [JsonIgnore]
-        public bool IsActive => TenureHelpers.IsTenureActive(EndDate);
-
-        public override bool Equals(object obj)
-        {
-            if (GetType() != obj?.GetType()) return false;
-            var otherObj = (TenureDetails) obj;
-            return otherObj != null
-                && (String.Compare(AssetFullAddress, otherObj.AssetFullAddress) == 0)
-                && (String.Compare(AssetId, otherObj.AssetId) == 0)
-                && (String.Compare(StartDate, otherObj.StartDate) == 0)
-                && (String.Compare(EndDate, otherObj.EndDate) == 0)
-                && Id.Equals(otherObj.Id)
-                && (String.Compare(Type, otherObj.Type) == 0)
-                && (String.Compare(Uprn, otherObj.Uprn) == 0)
-                && (String.Compare(PaymentReference, otherObj.PaymentReference) == 0)
-                && (String.Compare(PropertyReference, otherObj.PropertyReference) == 0);
-        }
-
         public override int GetHashCode()
         {
             StringBuilder builder = new StringBuilder();
@@ -55,7 +36,6 @@ namespace DynamodbTraining.V1.Domain
                           .Append(Uprn)
                           .Append(PaymentReference)
                           .Append(PropertyReference)
-                          .Append(IsActive)
                           .ToString()
                           .GetHashCode();
         }

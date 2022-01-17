@@ -35,8 +35,7 @@ namespace DynamodbTraining.V1.Factories
             if (tenures == null) return null;
 
             var sortedTenures = tenures
-                .OrderByDescending(x => x.IsActive)
-                .ThenByDescending(x => x.Type == "Secure")
+                .OrderByDescending(x => x.Type == "Secure")
                 .ThenByDescending(ParseTenureStartDate)
                 .ToList();
 
@@ -59,7 +58,6 @@ namespace DynamodbTraining.V1.Factories
                 AssetId = tenure.AssetId,
                 EndDate = tenure.EndDate,
                 Id = tenure.Id,
-                IsActive = tenure.IsActive,
                 PaymentReference = tenure.PaymentReference,
                 PropertyReference = tenure.PropertyReference,
                 StartDate = tenure.StartDate,

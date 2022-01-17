@@ -20,7 +20,7 @@ namespace DynamodbTraining.V1.Infrastructure
         public string Surname { get; set; }
         public string PlaceOfBirth { get; set; }
 
-        [DynamoDBProperty(Converter = typeof(DynamoDbDateTimeConverter))]
+        //[DynamoDBProperty(Converter = typeof(DynamoDbDateTimeConverter))]
         public string DateOfBirth { get; set; }
 
         [DynamoDBProperty(Converter = typeof(DynamoDbObjectListConverter<TenureDetails>))]
