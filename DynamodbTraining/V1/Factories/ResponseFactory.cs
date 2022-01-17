@@ -26,7 +26,11 @@ namespace DynamodbTraining.V1.Factories
                 Surname = domain.Surname,
                 Title = domain.Title,
                 Id = domain.Id,
-                Tenures = SortTenures(domain.Tenures)
+                Tenures = SortTenures(domain.Tenures),
+                PreferredTitle = domain.PreferredTitle,
+                PreferredFirstName = domain.PreferredFirstName,
+                PreferredMiddleName = domain.PreferredMiddleName,
+                PreferredSurname = domain.PreferredSurname
             };
         }
 
@@ -63,10 +67,6 @@ namespace DynamodbTraining.V1.Factories
                 StartDate = tenure.StartDate,
                 Type = tenure.Type,
                 Uprn = tenure.Uprn
-                PreferredTitle = domain.PreferredTitle,
-                PreferredFirstName = domain.PreferredFirstName,
-                PreferredMiddleName = domain.PreferredMiddleName,
-                PreferredSurname = domain.PreferredSurname
             };
         }
     }
