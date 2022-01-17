@@ -163,9 +163,9 @@ workflows:
   check-and-deploy-development:
     jobs:
       - check-code-formatting:
-          context: nuget-context
+          context: nuget-token-context
       - build-and-test:
-          context: nuget-context
+          context: nuget-token-context
       - assume-role-development:
           context: api-assume-role-housing-development-context
           requires:
@@ -180,7 +180,7 @@ workflows:
             branches:
               only: master
       - deploy-to-development:
-          context: nuget-context
+          context: nuget-token-context
           requires:
             - terraform-init-and-apply-to-development
           filters:
