@@ -1,6 +1,7 @@
 using Amazon.DynamoDBv2.DataModel;
 using DynamodbTraining.V1.Domain;
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DynamodbTraining.V1.Infrastructure
@@ -25,6 +26,9 @@ namespace DynamodbTraining.V1.Infrastructure
         public string PreferredFirstName { get; set; }
         public string PreferredMiddleName { get; set; }
         public string PreferredSurname { get; set; }
+
+        [DynamoDBProperty(Converter = typeof(DynamoDbObjectListConverter<TenureDetails>))]
+        public List<TenureDetails> Tenures { get; set; } = new List<TenureDetails>();
 
     }
 }

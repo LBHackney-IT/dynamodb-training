@@ -26,10 +26,47 @@ namespace DynamodbTraining.V1.Factories
                 Surname = domain.Surname,
                 Title = domain.Title,
                 Id = domain.Id,
+                Tenures = SortTenures(domain.Tenures),
                 PreferredTitle = domain.PreferredTitle,
                 PreferredFirstName = domain.PreferredFirstName,
                 PreferredMiddleName = domain.PreferredMiddleName,
                 PreferredSurname = domain.PreferredSurname
+            };
+        }
+
+        private static List<TenureResponseObject> SortTenures(IEnumerable<TenureDetails> tenures)
+        {
+            if (tenures == null) return null;
+
+            var sortedTenures = tenures
+                .OrderByDescending(x => x.Type == "Secure")
+                .ThenByDescending(ParseTenureStartDate)
+                .ToList();
+
+            return sortedTenures.Select(x => ToResponse(x)).ToList();
+        }
+
+        private static DateTime? ParseTenureStartDate(TenureDetails tenure)
+        {
+            DateTime parsedDate;
+            if (DateTime.TryParse(tenure.StartDate, out parsedDate)) return (DateTime?) parsedDate;
+
+            return null;
+        }
+
+        public static TenureResponseObject ToResponse(TenureDetails tenure)
+        {
+            return new TenureResponseObject()
+            {
+                AssetFullAddress = tenure.AssetFullAddress,
+                AssetId = tenure.AssetId,
+                EndDate = tenure.EndDate,
+                Id = tenure.Id,
+                PaymentReference = tenure.PaymentReference,
+                PropertyReference = tenure.PropertyReference,
+                StartDate = tenure.StartDate,
+                Type = tenure.Type,
+                Uprn = tenure.Uprn
             };
         }
     }

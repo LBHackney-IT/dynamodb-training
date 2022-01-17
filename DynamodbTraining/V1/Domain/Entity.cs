@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace DynamodbTraining.V1.Domain
 {
@@ -11,6 +12,8 @@ namespace DynamodbTraining.V1.Domain
         public string Surname { get; set; }
         public string PlaceOfBirth { get; set; }
         public string DateOfBirth { get; set; }
+        public IEnumerable<TenureDetails> Tenures { get; set; }
+
         public string PreferredTitle { get; set; }
         public string PreferredFirstName { get; set; }
         public string PreferredMiddleName { get; set; }
