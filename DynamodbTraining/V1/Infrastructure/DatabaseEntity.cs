@@ -21,6 +21,10 @@ namespace DynamodbTraining.V1.Infrastructure
 
         //[DynamoDBProperty(Converter = typeof(DynamoDbDateTimeConverter))]
         public string DateOfBirth { get; set; }
+        public string PreferredTitle { get; set; }
+        public string PreferredFirstName { get; set; }
+        public string PreferredMiddleName { get; set; }
+        public string PreferredSurname { get; set; }
 
     }
 }

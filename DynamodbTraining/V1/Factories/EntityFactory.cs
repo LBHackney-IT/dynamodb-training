@@ -16,7 +16,11 @@ namespace DynamodbTraining.V1.Factories
                 MiddleName = databaseEntity.MiddleName,
                 PlaceOfBirth = databaseEntity.PlaceOfBirth,
                 Surname = databaseEntity.Surname,
-                Title = databaseEntity.Title
+                Title = databaseEntity.Title,
+                PreferredTitle = databaseEntity.PreferredTitle,
+                PreferredFirstName = databaseEntity.PreferredFirstName,
+                PreferredMiddleName = databaseEntity.PreferredMiddleName,
+                PreferredSurname = databaseEntity.PreferredSurname
             };
         }
 
@@ -31,7 +35,11 @@ namespace DynamodbTraining.V1.Factories
                 PlaceOfBirth = entity.PlaceOfBirth,
                 MiddleName = entity.MiddleName,
                 FirstName = entity.FirstName,
-                DateOfBirth = entity.DateOfBirth
+                DateOfBirth = entity.DateOfBirth,
+                PreferredTitle = entity.PreferredTitle,
+                PreferredFirstName = entity.PreferredFirstName,
+                PreferredMiddleName = entity.PreferredMiddleName,
+                PreferredSurname = entity.PreferredSurname
             };
         }
     }

@@ -25,7 +25,11 @@ namespace DynamodbTraining.V1.Factories
                 PlaceOfBirth = domain.PlaceOfBirth,
                 Surname = domain.Surname,
                 Title = domain.Title,
-                Id = domain.Id
+                Id = domain.Id,
+                PreferredTitle = domain.PreferredTitle,
+                PreferredFirstName = domain.PreferredFirstName,
+                PreferredMiddleName = domain.PreferredMiddleName,
+                PreferredSurname = domain.PreferredSurname
             };
         }
     }
