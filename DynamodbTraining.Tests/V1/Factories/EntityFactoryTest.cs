@@ -19,7 +19,7 @@ namespace DynamodbTraining.Tests.V1.Factories
             var databaseEntity = _fixture.Create<DatabaseEntity>();
             var entity = databaseEntity.ToDomain();
 
-            databaseEntity.Id.Should().Be(entity.Id);
+            databaseEntity.Should().BeEquivalentTo(entity);
         }
 
 
@@ -29,7 +29,7 @@ namespace DynamodbTraining.Tests.V1.Factories
             var entity = _fixture.Create<Entity>();
             var databaseEntity = entity.ToDatabase();
 
-            entity.Id.Should().Be(databaseEntity.Id);
+            entity.Should().BeEquivalentTo(databaseEntity);
         }
     }
 }

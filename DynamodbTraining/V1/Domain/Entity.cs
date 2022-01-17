@@ -11,5 +11,9 @@ namespace DynamodbTraining.V1.Domain
         public string Surname { get; set; }
         public string PlaceOfBirth { get; set; }
         public string DateOfBirth { get; set; }
+        public string PreferredTitle { get; set; }
+        public string PreferredFirstName { get; set; }
+        public string PreferredMiddleName { get; set; }
+        public string PreferredSurname { get; set; }
     }
 }

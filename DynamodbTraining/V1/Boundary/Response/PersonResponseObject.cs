@@ -20,5 +20,13 @@ namespace DynamodbTraining.V1.Boundary.Response
         public string PlaceOfBirth { get; set; }
         /// <example>1990-02-19</example>
         public string DateOfBirth { get; set; }
+        /// <example>Mr, Mrs, Miss</example>
+        public string PreferredTitle { get; set; }
+        /// <example>James</example>
+        public string PreferredFirstName { get; set; }
+        /// <example>Harold</example>
+        public string PreferredMiddleName { get; set; }
+        /// <example>White</example>
+        public string PreferredSurname { get; set; }
     }
 }
