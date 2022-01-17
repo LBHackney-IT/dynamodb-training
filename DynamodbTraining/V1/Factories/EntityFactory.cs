@@ -18,7 +18,7 @@ namespace DynamodbTraining.V1.Factories
                 PlaceOfBirth = databaseEntity.PlaceOfBirth,
                 Surname = databaseEntity.Surname,
                 Title = databaseEntity.Title,
-                Tenures = databaseEntity.Tenures
+                Tenures = databaseEntity.Tenures,
                 PreferredTitle = databaseEntity.PreferredTitle,
                 PreferredFirstName = databaseEntity.PreferredFirstName,
                 PreferredMiddleName = databaseEntity.PreferredMiddleName,
@@ -38,7 +38,7 @@ namespace DynamodbTraining.V1.Factories
                 MiddleName = entity.MiddleName,
                 FirstName = entity.FirstName,
                 DateOfBirth = entity.DateOfBirth,
-                Tenures = entity.Tenures.ToList()
+                Tenures = entity.Tenures.ToList(),
                 PreferredTitle = entity.PreferredTitle,
                 PreferredFirstName = entity.PreferredFirstName,
                 PreferredMiddleName = entity.PreferredMiddleName,
