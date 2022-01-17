@@ -1,5 +1,6 @@
 using DynamodbTraining.V1.Domain;
 using DynamodbTraining.V1.Infrastructure;
+using System.Linq;
 
 namespace DynamodbTraining.V1.Factories
 {
@@ -16,7 +17,8 @@ namespace DynamodbTraining.V1.Factories
                 MiddleName = databaseEntity.MiddleName,
                 PlaceOfBirth = databaseEntity.PlaceOfBirth,
                 Surname = databaseEntity.Surname,
-                Title = databaseEntity.Title
+                Title = databaseEntity.Title,
+                Tenures = databaseEntity.Tenures
             };
         }
 
@@ -31,7 +33,8 @@ namespace DynamodbTraining.V1.Factories
                 PlaceOfBirth = entity.PlaceOfBirth,
                 MiddleName = entity.MiddleName,
                 FirstName = entity.FirstName,
-                DateOfBirth = entity.DateOfBirth
+                DateOfBirth = entity.DateOfBirth,
+                Tenures = entity.Tenures.ToList()
             };
         }
     }

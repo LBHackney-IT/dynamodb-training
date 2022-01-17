@@ -110,6 +110,7 @@ namespace DynamodbTraining.Tests.V1.Gateways
             response.MiddleName.Should().Be(entity.MiddleName);
             response.PlaceOfBirth.Should().Be(entity.PlaceOfBirth);
             response.Title.Should().Be(entity.Title);
+            response.Tenures.Should().BeEquivalentTo(entity.Tenures);
 
         }
 

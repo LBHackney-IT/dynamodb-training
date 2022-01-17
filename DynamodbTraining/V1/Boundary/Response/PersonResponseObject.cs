@@ -1,5 +1,6 @@
 using DynamodbTraining.V1.Domain;
 using System;
+using System.Collections.Generic;
 
 namespace DynamodbTraining.V1.Boundary.Response
 {
@@ -20,5 +21,7 @@ namespace DynamodbTraining.V1.Boundary.Response
         public string PlaceOfBirth { get; set; }
         /// <example>1990-02-19</example>
         public string DateOfBirth { get; set; }
+        public IEnumerable<TenureResponseObject> Tenures { get; set; }
+
     }
 }
